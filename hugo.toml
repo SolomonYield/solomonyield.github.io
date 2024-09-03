@@ -16,7 +16,7 @@ disqusShortname = 'your-disqus-shortname' # <- Get form here : https://disqus.co
 [author]
 	name = 'Andrei CN'
 	bio = 'Researcher in Behavioral Economics Markets'
-	avatar = '/images/author_photo1.png'
+	avatar = '/images/author_photo1.jpg'
 	twitter = 'https://twitter.com/insertapps'
 
 [menu] # Menu management
