@@ -9,9 +9,10 @@ googleAnalytics = 'G-MEASUREMENT_ID' # <- Your GA-4
 disqusShortname = 'your-disqus-shortname' # <- Get form here : https://disqus.com
 
 [params]
-	# Meta description, not exceeding 160 characters, used for the meta description within the HTML head
-	description = 'Pehtheme Hugo Lite: A minimalist Hugo theme, built with TailwindCSS, for efficient performance and minimalism.'
+	
+	description = 'At DiligentYield, we deliver timely research and data-driven analysis to help investors uncover market discrepancies and make informed decisions.'
 	mainSections = 'posts'
+  	logo = "favicon-64.png"
 
 [author]
 	name = 'Andrei CN'
