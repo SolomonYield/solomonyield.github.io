@@ -7,3 +7,13 @@
 {{- partialCached "head/css.html" . -}}
 {{- partialCached "head/favicon.html" . -}}
 {{- /* template "_internal/google_analytics.html" . */ -}}
+
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "url": "{{ .Site.BaseURL }}",
+      "logo": "{{ "favicon.png" | relURL }}"
+    }
+    </script>
+    
