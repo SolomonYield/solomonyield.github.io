@@ -32,7 +32,7 @@ disqusShortname = 'diligentyield-com' # <- Get form here : https://disqus.com
 		facebook = "https://twitter.com/peterfinance"
 
 	[[params.authors.author]]
-	name = "Peter KN"
+	name = "Peter Canariov"
 	bio = "Investor. Analyst in Financial Markets"
 	avatar = "/images/author_photo2.jpg"
 	twitter = "https://twitter.com/peterfinance"

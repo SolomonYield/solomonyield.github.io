@@ -5,7 +5,7 @@ slug: /esg-a-thing-of-the-past/
 description: As ESG's dominance is fading, focus falls on technology, energy, and local businesses
 image: images/esg_fire.png
 caption: Image by ©TimMohin 
-authors: "Peter KN" 
+authors: "Peter Canariov" 
 tags:
   - feature
   - ESG
