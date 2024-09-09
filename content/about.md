@@ -1,10 +1,10 @@
 ---
-title: "About"
+title: "About Diligent Yield"
 date: 2023-10-06T20:37:29+07:00
 image: images/nadine-shaabana-ZPP-zP8HYG0-unsplash.jpg
 draft: false
 ---
-# About DiligentYield.com
+
 
 Welcome to **DiligentYield.com**, a platform dedicated to providing daily market analysis, insights, and predictions. Our mission is to help retail investors navigate the complexities of the financial markets, leveraging the power of behavioral economics, fundamental analysis, and macroeconomic trends to achieve exceptional returns.
 

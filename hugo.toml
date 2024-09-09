@@ -5,20 +5,40 @@ title = 'Diligent Yield'
 
 paginate = '6' # <- Set the desired number of posts per page 
 summaryLength = '20' # <- 20 words are approximately 160 characters
-googleAnalytics = 'G-MEASUREMENT_ID' # <- Your GA-4
-disqusShortname = 'your-disqus-shortname' # <- Get form here : https://disqus.com
+googleAnalytics = 'G-HS91ELQDD3' 
+disqusShortname = 'diligentyield-com' # <- Get form here : https://disqus.com
 
 [params]
 	
 	description = 'At DiligentYield, we deliver timely research and data-driven analysis to help investors uncover market discrepancies and make informed decisions.'
 	mainSections = 'posts'
-  	logo = "favicon-64.png"
+  	logo = "favicon.png"
+	defaultAuthor = "Andrei CN"
 
-[author]
-	name = 'Andrei CN'
-	bio = 'Researcher in Behavioral Economics Markets'
-	avatar = '/images/author_photo1.jpg'
-	twitter = 'https://twitter.com/insertapps'
+[taxonomies]
+  author = "authors"
+  tag = "tags"
+  category = "categories"
+
+
+[params.authors]
+	[[params.authors.author]]
+		name = "Andrei CN"
+		bio = "Researcher in Behavioral Economics Markets"
+		avatar = "/images/author_photo1.jpg"
+		twitter = "https://twitter.com/peterfinance"
+		linkedin = "https://twitter.com/peterfinance"
+		instagram = "https://twitter.com/peterfinance"
+		facebook = "https://twitter.com/peterfinance"
+
+	[[params.authors.author]]
+	name = "Peter KN"
+	bio = "Investor. Analyst in Financial Markets"
+	avatar = "/images/author_photo2.jpg"
+	twitter = "https://twitter.com/peterfinance"
+	linkedin = "https://www.linkedin.com/in/petru-canariov-566563176/"
+	instagram = "https://twitter.com/peterfinance"
+	facebook = "https://twitter.com/peterfinance"
 
 [menu] # Menu management
 	[[menu.main]]
