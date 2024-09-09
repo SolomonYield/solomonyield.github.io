@@ -26,7 +26,7 @@ One of the key reasons for this shift is the lack of global unity and centraliza
 
 ## Investment Market Reorientation
 
-As the world adjusts to new global realities, the investment market is also undergoing a transformation. [BlackRock’s recent acquisition](https://www.blackrock.com/us/individual/newsroom) of research and analysis firm Perquin highlights this shift, suggesting a growing interest in private investments and local businesses. Major investors are increasingly favoring sustainable investments in smaller businesses rather than large-scale ESG projects.
+As the world adjusts to new global realities, the investment market is also undergoing a transformation. [BlackRock’s recent acquisition](https://www.blackrock.com/us/individual/newsroom) of research and analysis firm [Preqin](https://www.preqin.com) highlights this shift, suggesting a growing interest in private investments and local businesses. Major investors are increasingly favoring sustainable investments in smaller businesses rather than large-scale ESG projects.
 
 This move reflects a broader trend away from centralization, which no longer aligns with current geopolitical and economic conditions. Investments are now flowing more towards technology, analytics, and a reorganization of portfolios to better manage emerging risks.
 
@@ -39,3 +39,5 @@ The instability caused by recent global events has led investors to reevaluate t
 The investment landscape is at a pivotal moment, with a growing emphasis on research, analysis, and insights into technology, energy resources, and sustainable practices within small and medium-sized enterprises. As investors seek to navigate a complex and shifting global environment, the battle for strategic insight in these areas will shape the future of investment priorities.
 
 The question now is whether ESG can adapt to this new world order or if its decline signals the beginning of a new era in global finance.
+
+
