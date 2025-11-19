@@ -1,0 +1,381 @@
+/* Home Page Specific Styles */
+
+/* Hero Section */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 8rem 0 4rem;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 20% 50%, rgba(0, 255, 136, 0.15) 0%, transparent 50%),
+              radial-gradient(circle at 80% 20%, rgba(0, 212, 255, 0.15) 0%, transparent 50%);
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: rgba(0, 255, 136, 0.1);
+  border: 1px solid rgba(0, 255, 136, 0.3);
+  border-radius: 50px;
+  color: #00ff88;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+  animation: fadeInUp 0.8s ease;
+}
+
+.badge-dot {
+  width: 8px;
+  height: 8px;
+  background: #00ff88;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.2);
+  }
+}
+
+.hero-title {
+  font-size: 4rem;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  animation: fadeInUp 0.8s ease 0.2s backwards;
+}
+
+.hero-description {
+  font-size: 1.25rem;
+  color: #b8c5d6;
+  max-width: 700px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.7;
+  animation: fadeInUp 0.8s ease 0.4s backwards;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 4rem;
+  animation: fadeInUp 0.8s ease 0.6s backwards;
+}
+
+/* Hero Stats */
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  padding: 2rem;
+  background: rgba(15, 23, 30, 0.6);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(0, 255, 136, 0.1);
+  border-radius: 16px;
+  animation: fadeInUp 0.8s ease 0.8s backwards;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #00ff88, #00d4ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.2;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: #8895a7;
+  margin-top: 0.25rem;
+}
+
+.stat-divider {
+  width: 1px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Mission Section */
+.mission-section {
+  background: linear-gradient(180deg, transparent 0%, rgba(0, 255, 136, 0.02) 100%);
+}
+
+.mission-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.mission-content h2 {
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+}
+
+.mission-content p {
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+}
+
+.mission-visual {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.visual-card {
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+
+.visual-card:hover {
+  transform: translateX(10px);
+  border-color: rgba(0, 255, 136, 0.3);
+}
+
+.card-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.visual-card h3 {
+  color: #ffffff;
+  margin-bottom: 0.75rem;
+}
+
+.visual-card p {
+  color: #8895a7;
+  font-size: 0.95rem;
+}
+
+/* Solutions Overview */
+.solutions-overview {
+  background: rgba(0, 212, 255, 0.02);
+}
+
+.section-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 4rem;
+}
+
+.section-header h2 {
+  margin-bottom: 1rem;
+}
+
+.section-header p {
+  font-size: 1.15rem;
+}
+
+.solution-card {
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.solution-icon {
+  font-size: 3rem;
+  margin-bottom: 1.25rem;
+}
+
+.solution-card h3 {
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.solution-card p {
+  margin-bottom: 1.5rem;
+  color: #8895a7;
+}
+
+.solution-link {
+  color: #00ff88;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.solution-link:hover {
+  transform: translateX(5px);
+  color: #00d4ff;
+}
+
+/* Technology Section */
+.tech-section {
+  background: linear-gradient(180deg, rgba(0, 255, 136, 0.02) 0%, transparent 100%);
+}
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.tech-stack {
+  padding: 2.5rem;
+}
+
+.stack-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.stack-item:last-child {
+  border-bottom: none;
+}
+
+.stack-label {
+  color: #8895a7;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.stack-tech {
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.tech-content h2 {
+  margin-bottom: 1.5rem;
+}
+
+.tech-content p {
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+}
+
+/* CTA Section */
+.cta-section {
+  background: radial-gradient(circle at center, rgba(0, 255, 136, 0.1) 0%, transparent 70%);
+}
+
+.cta-card {
+  text-align: center;
+  padding: 4rem 3rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cta-card h2 {
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.cta-card p {
+  font-size: 1.15rem;
+  margin-bottom: 2.5rem;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .hero-title {
+    font-size: 3rem;
+  }
+  
+  .mission-grid,
+  .tech-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .tech-grid .tech-visual {
+    order: 2;
+  }
+  
+  .solutions-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: auto;
+    padding: 6rem 0 3rem;
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-description {
+    font-size: 1.1rem;
+  }
+  
+  .hero-cta {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .hero-stats {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .stat-divider {
+    width: 100%;
+    height: 1px;
+  }
+  
+  .cta-card {
+    padding: 3rem 2rem;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .stat-value {
+    font-size: 2rem;
+  }
+}
