@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<title>Newsletter — Diligent Yield</title>
+	<link rel="stylesheet" href="assets/css/main.css">
+	<link rel="stylesheet" href="assets/css/navbar.css">
+	<link rel="stylesheet" href="assets/css/newsletter.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+</head>
+<body>
+	<div id="site-navbar"></div>
+	<script>
+		(async function loadComponents(){
+			try{
+				const navbarResp = await fetch('components/navbar.html');
+				if(navbarResp.ok){
+					document.getElementById('site-navbar').innerHTML = await navbarResp.text();
+				}
+
+				const footerResp = await fetch('components/footer.html');
+				if(footerResp.ok){
+					// create footer placeholder now so it appears after main
+					const footerHolder = document.createElement('div');
+					footerHolder.id = 'site-footer';
+					document.body.appendChild(footerHolder);
+					document.getElementById('site-footer').innerHTML = await footerResp.text();
+				}
+
+				// load navbar script after insertion so it can bind to DOM
+				const s = document.createElement('script');
+				s.src = 'assets/js/navbar.js';
+				s.defer = true;
+				document.body.appendChild(s);
+			}catch(e){
+				console.warn('Could not load components', e);
+			}
+		})();
+	</script>
+
+	<main class="ny-page">
+		<section class="ny-hero">
+			<div class="ny-card">
+				<header class="ny-header">
+					<h1 class="ny-title">Stay Informed. Stay Ahead.</h1>
+					<p class="ny-sub">Subscribe to receive market insights, research updates, and product announcements from Diligent Yield.</p>
+				</header>
+
+				<form id="ny-form" class="ny-form" action="#" novalidate>
+					<label for="email" class="sr-only">Email address</label>
+					<div class="ny-input-row">
+						<input id="email" name="email" type="email" placeholder="you@company.com" required autocomplete="email" />
+						<button class="nav-link-cta" type="submit">Subscribe</button>
+					</div>
+					<p class="ny-note">Enter your email to receive updates. No spam — only valuable insights.</p>
+					<p class="ny-privacy">We respect your privacy. You can unsubscribe at any time.</p>
+				</form>
+
+				<div class="ny-bullets" aria-hidden="false">
+					<ul>
+						<li><svg class="ny-icon" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" stroke="#00ff88" stroke-opacity="0.25"/></svg>AI-driven market insights</li>
+						<li><svg class="ny-icon" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" stroke="#00d4ff" stroke-opacity="0.25"/></svg>Research summaries</li>
+						<li><svg class="ny-icon" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" stroke="#8affc7" stroke-opacity="0.25"/></svg>Product updates</li>
+						<li><svg class="ny-icon" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" stroke="#6fdfff" stroke-opacity="0.18"/></svg>New investment tools and features</li>
+					</ul>
+				</div>
+
+				<p class="ny-trust">Trusted by investors, professionals, and technology enthusiasts across Europe.</p>
+
+				<div class="ny-links">
+					<a class="ny-link" href="index.html">Back to Home</a>
+					<a class="ny-link" href="solutions.html">Explore Solutions</a>
+				</div>
+			</div>
+		</section>
+		</main>
+
+	<!-- footer placeholder (in case fetch didn't append earlier) -->
+	<div id="site-footer" aria-hidden="true"></div>
+
+	<script>
+		(function(){
+			const form = document.getElementById('ny-form');
+			const email = document.getElementById('email');
+			form.addEventListener('submit', function(e){
+				e.preventDefault();
+				const val = email.value.trim();
+				const re = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+				if(!re.test(val)){
+					email.classList.add('ny-invalid');
+					email.focus();
+					return;
+				}
+				// Visual success state — replace form with thank-you message
+				const card = document.querySelector('.ny-card');
+				const thank = document.createElement('div');
+				thank.className = 'ny-thanks';
+				thank.innerHTML = '<h2>Thank you</h2><p>You\'re subscribed — look out for the next update.</p>';
+				card.replaceChild(thank, form);
+			});
+		})();
+	</script>
+</body>
+</html>
