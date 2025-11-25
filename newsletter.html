@@ -60,10 +60,30 @@
 
 				<div class="ny-bullets" aria-hidden="false">
 					<ul>
-						<li><svg class="ny-icon" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" stroke="#00ff88" stroke-opacity="0.25"/></svg>AI-driven market insights</li>
-						<li><svg class="ny-icon" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" stroke="#00d4ff" stroke-opacity="0.25"/></svg>Research summaries</li>
-						<li><svg class="ny-icon" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" stroke="#8affc7" stroke-opacity="0.25"/></svg>Product updates</li>
-						<li><svg class="ny-icon" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" stroke="#6fdfff" stroke-opacity="0.18"/></svg>New investment tools and features</li>
+						<li>
+							<button type="button" class="ny-bullet">
+								<svg class="ny-icon" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" stroke="#00ff88" stroke-opacity="0.25"/></svg>
+								<span>AI-driven market insights</span>
+							</button>
+						</li>
+						<li>
+							<button type="button" class="ny-bullet">
+								<svg class="ny-icon" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" stroke="#00d4ff" stroke-opacity="0.25"/></svg>
+								<span>Research summaries</span>
+							</button>
+						</li>
+						<li>
+							<button type="button" class="ny-bullet">
+								<svg class="ny-icon" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" stroke="#8affc7" stroke-opacity="0.25"/></svg>
+								<span>Product updates</span>
+							</button>
+						</li>
+						<li>
+							<button type="button" class="ny-bullet">
+								<svg class="ny-icon" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" stroke="#6fdfff" stroke-opacity="0.18"/></svg>
+								<span>New investment tools and features</span>
+							</button>
+						</li>
 					</ul>
 				</div>
 
@@ -100,6 +120,32 @@
 				thank.innerHTML = '<h2>Thank you</h2><p>You\'re subscribed — look out for the next update.</p>';
 				card.replaceChild(thank, form);
 			});
+
+			// Make bullets interactive: toggle selected state and support keyboard
+			function initBullets(){
+				const bullets = document.querySelectorAll('.ny-bullet');
+				if(!bullets || bullets.length === 0) return;
+				bullets.forEach(btn => {
+					btn.addEventListener('click', () => {
+						bullets.forEach(b => b.classList.remove('selected'));
+						btn.classList.add('selected');
+					});
+
+					btn.addEventListener('keydown', (ev) => {
+						if(ev.key === 'Enter' || ev.key === ' '){
+							ev.preventDefault();
+							btn.click();
+						}
+					});
+				});
+			}
+
+			// init after DOM content
+			if(document.readyState === 'loading'){
+				document.addEventListener('DOMContentLoaded', initBullets);
+			}else{
+				initBullets();
+			}
 		})();
 	</script>
 </body>

@@ -29,8 +29,12 @@ body{background: radial-gradient(800px 400px at 10% 10%, rgba(0,255,136,0.05), t
 
 .ny-bullets{margin-top:1.6rem}
 .ny-bullets ul{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0.8rem}
-.ny-bullets li{display:flex;gap:0.65rem;align-items:center;color:#cfe9ff;font-size:0.95rem}
-.ny-icon{width:20px;height:20px;flex:0 0 20px}
+.ny-bullets li{display:block}
+.ny-bullet{background:none;border:0;color:#cfe9ff;display:flex;gap:0.65rem;align-items:center;font-size:0.95rem;padding:0.45rem;border-radius:8px;cursor:pointer;width:100%;text-align:left;transition:color 150ms ease,background 150ms ease}
+.ny-bullet:hover{color:#00ff88;background:rgba(0,255,136,0.02)}
+.ny-bullet:focus{outline:2px solid rgba(0,255,136,0.08);outline-offset:2px}
+.ny-bullet .ny-icon{width:20px;height:20px;flex:0 0 20px}
+.ny-bullet.selected{color:#00ff88;font-weight:600}
 
 .ny-trust{margin-top:1.25rem;color:#91a7b8;font-size:0.88rem;text-align:left}
 
